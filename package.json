@@ -1,0 +1,18 @@
+{
+  "name": "smart-parking-reservation-system",
+  "version": "1.0.0",
+  "description": "Smart Parking Reservation System (ParkPulse) - Full Stack Application",
+  "scripts": {
+    "start": "npm --prefix frontend start",
+    "build": "npm --prefix frontend run build",
+    "test": "npm --prefix frontend test"
+  },
+  "keywords": [
+    "angular",
+    "dotnet",
+    "parking",
+    "reservation"
+  ],
+  "author": "ParkPulse Enterprise",
+  "license": "MIT"
+}

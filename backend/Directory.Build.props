@@ -1,0 +1,6 @@
+<Project>
+  <PropertyGroup>
+    <!-- Disable remote vulnerability audit during local builds to prevent 60-second network timeouts -->
+    <NuGetAudit>false</NuGetAudit>
+  </PropertyGroup>
+</Project>

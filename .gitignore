@@ -1,0 +1,34 @@
+## Build results
+[Bb]in/
+[Oo]bj/
+[Ll]og/
+[Ll]ogs/
+[Tt]est[Rr]esults/
+
+## Visual Studio & VS Code
+.vs/
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+*.user
+*.suo
+*.userprefs
+*.sln.docstates
+
+## Node & Angular
+node_modules/
+dist/
+.angular/cache/
+.angular/
+.sass-cache/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+## OS and temporary files
+.DS_Store
+Thumbs.db
+*.tmp
+*.log
