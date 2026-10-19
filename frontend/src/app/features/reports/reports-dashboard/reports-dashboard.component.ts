@@ -1,4 +1,4 @@
-import { Component, OnInit, ElementRef, ViewChild, inject, AfterViewInit } from '@angular/core';
+﻿import { Component, OnInit, ElementRef, ViewChild, inject, AfterViewInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { MatButtonModule } from '@angular/material/button';
@@ -66,7 +66,7 @@ Chart.register(...registerables);
         <div class="kpi-grid">
           <div class="kpi-card highlight-blue">
             <span class="kpi-title">Gross Revenue</span>
-            <span class="kpi-value text-blue">\${{ revenueData?.totalRevenue || 0 | number:'1.2-2' }}</span>
+            <span class="kpi-value text-blue">Birr {{ revenueData?.totalRevenue || 0 | number:'1.2-2' }}</span>
             <span class="kpi-trend">Settled parking fees & overstay charges</span>
           </div>
 
@@ -134,7 +134,7 @@ Chart.register(...registerables);
             [pageSize]="5">
             <ng-template let-row let-col="column">
               <ng-container *ngIf="col.key === 'amount'">
-                <strong class="text-blue">\${{ row.amount | number:'1.2-2' }}</strong>
+                <strong class="text-blue">Birr {{ row.amount | number:'1.2-2' }}</strong>
               </ng-container>
               <ng-container *ngIf="col.key === 'occupancy'">
                 <span>{{ row.occupancy }}%</span>
@@ -493,7 +493,7 @@ export class ReportsDashboardComponent implements OnInit, AfterViewInit {
         data: {
           labels: this.revenueData.dates,
           datasets: [{
-            label: 'Revenue ($)',
+            label: 'Revenue (Birr)',
             data: this.revenueData.amounts,
             backgroundColor: 'rgba(37, 99, 235, 0.75)',
             borderColor: '#2563eb',

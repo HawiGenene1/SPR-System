@@ -1,4 +1,4 @@
-import { Component, OnInit, inject } from '@angular/core';
+﻿import { Component, OnInit, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
@@ -61,7 +61,7 @@ import { StatusBadgeComponent } from '../../../shared/components/status-badge/st
         <div class="strip-divider"></div>
         <div class="strip-item">
           <span class="strip-label">Overstay Revenue</span>
-          <span class="strip-val text-indigo">\${{ totalOverstayRevenue | number:'1.2-2' }}</span>
+          <span class="strip-val text-indigo">Birr {{ totalOverstayRevenue | number:'1.2-2' }}</span>
         </div>
       </div>
 
@@ -165,7 +165,7 @@ import { StatusBadgeComponent } from '../../../shared/components/status-badge/st
             <ng-container *ngIf="col.key === 'overstay'">
               <div *ngIf="row.overstayMinutes && row.overstayMinutes > 0" class="overstay-tag has-overstay">
                 <span class="material-symbols-outlined">warning</span>
-                <span>+{{ row.overstayMinutes }}m (\${{ (row.overstayFee || 0) | number:'1.2-2' }})</span>
+                <span>+{{ row.overstayMinutes }}m (Birr {{ (row.overstayFee || 0) | number:'1.2-2' }})</span>
               </div>
               <div *ngIf="!row.overstayMinutes || row.overstayMinutes <= 0" class="overstay-tag on-time">
                 <span class="material-symbols-outlined">check</span>

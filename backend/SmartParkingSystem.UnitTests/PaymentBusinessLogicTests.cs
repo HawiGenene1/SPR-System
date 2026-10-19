@@ -174,7 +174,7 @@ public static class PaymentBusinessLogicTests
         {
             TransactionReference = "TXN-TEST-001",
             Amount = 50.00m,
-            Currency = "USD",
+            Currency = "ETB",
             PaymentMethod = PaymentMethod.Card,
             CustomerEmail = "customer@example.com",
             CustomerName = "John Doe"
@@ -197,7 +197,7 @@ public static class PaymentBusinessLogicTests
         {
             TransactionReference = "TXN-TEST-MM01",
             Amount = 25.00m,
-            Currency = "USD",
+            Currency = "ETB",
             PaymentMethod = PaymentMethod.MobileMoney,
             CustomerEmail = "customer@example.com",
             CustomerName = "Jane Doe"

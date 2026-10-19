@@ -1,4 +1,4 @@
-import { Component, OnInit, inject } from '@angular/core';
+﻿import { Component, OnInit, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule, ReactiveFormsModule, FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router, RouterModule, ActivatedRoute } from '@angular/router';
@@ -70,7 +70,7 @@ import { StatusBadgeComponent } from '../../../shared/components/status-badge/st
                   <div class="select-value-display">
                     <span class="material-symbols-outlined select-icon">domain</span>
                     <span class="select-name">{{ selectedArea.name }}</span>
-                    <span class="select-rate">(\${{ selectedArea.hourlyRate | number:'1.2-2' }}/hr)</span>
+                    <span class="select-rate">(Birr {{ selectedArea.hourlyRate | number:'1.2-2' }}/hr)</span>
                   </div>
                 </mat-select-trigger>
                 <mat-option *ngFor="let area of areas" [value]="area.id">
@@ -80,7 +80,7 @@ import { StatusBadgeComponent } from '../../../shared/components/status-badge/st
                       <span class="option-location">{{ area.location }}</span>
                     </div>
                     <div class="option-metrics">
-                      <span class="option-rate">\${{ area.hourlyRate | number:'1.2-2' }}/hr</span>
+                      <span class="option-rate">Birr {{ area.hourlyRate | number:'1.2-2' }}/hr</span>
                       <span class="option-capacity">{{ area.availableSlots }} free</span>
                     </div>
                   </div>
@@ -192,7 +192,7 @@ import { StatusBadgeComponent } from '../../../shared/components/status-badge/st
           (click)="onAreaSelected(area.id)">
           <div class="strip-header">
             <span class="strip-name">{{ area.name }}</span>
-            <span class="strip-rate">\${{ area.hourlyRate | number:'1.2-2' }}/hr</span>
+            <span class="strip-rate">Birr {{ area.hourlyRate | number:'1.2-2' }}/hr</span>
           </div>
           <div class="strip-footer">
             <span class="strip-slots">
@@ -319,7 +319,7 @@ import { StatusBadgeComponent } from '../../../shared/components/status-badge/st
               </div>
               <div class="info-cell">
                 <span class="cell-label">Hourly Rate</span>
-                <span class="cell-val">\${{ (selectedSlot.pricePerHour || selectedArea.hourlyRate) | number:'1.2-2' }} / hr</span>
+                <span class="cell-val">Birr {{ (selectedSlot.pricePerHour || selectedArea.hourlyRate) | number:'1.2-2' }} / hr</span>
               </div>
             </div>
           </div>
@@ -328,7 +328,7 @@ import { StatusBadgeComponent } from '../../../shared/components/status-badge/st
           <div class="drawer-actions">
             <div class="price-breakdown">
               <span class="price-sub">{{ calculatedHours | number:'1.1-1' }} hrs estimated</span>
-              <span class="price-total">\${{ calculatedTotal | number:'1.2-2' }}</span>
+              <span class="price-total">Birr {{ calculatedTotal | number:'1.2-2' }}</span>
             </div>
 
             <button 

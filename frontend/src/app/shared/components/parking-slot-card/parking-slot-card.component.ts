@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Input, Output } from '@angular/core';
+﻿import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ParkingSlotDto } from '../../../core/models';
 import { StatusBadgeComponent } from '../status-badge/status-badge.component';
@@ -56,7 +56,7 @@ import { StatusBadgeComponent } from '../status-badge/status-badge.component';
       <!-- Card Footer: Price / Hour and Action Hint -->
       <div class="card-footer">
         <div class="price-box">
-          <span class="price-val">\${{ displayPrice | number:'1.2-2' }}</span>
+          <span class="price-val">Birr {{ displayPrice | number:'1.2-2' }}</span>
           <span class="price-unit">/hour</span>
         </div>
 

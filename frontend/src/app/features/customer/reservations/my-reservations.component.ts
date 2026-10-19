@@ -1,4 +1,4 @@
-import { Component, OnInit, inject } from '@angular/core';
+﻿import { Component, OnInit, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { FormsModule } from '@angular/forms';
@@ -119,7 +119,7 @@ import { QrTicketModalComponent } from './qr-ticket-modal.component';
                 </div>
                 <div class="meta-item">
                   <span class="material-symbols-outlined">payments</span>
-                  <span>Amount: <strong class="price-val">\${{ res.totalAmount | number:'1.2-2' }}</strong></span>
+                  <span>Amount: <strong class="price-val">Birr {{ res.totalAmount | number:'1.2-2' }}</strong></span>
                 </div>
               </div>
             </div>

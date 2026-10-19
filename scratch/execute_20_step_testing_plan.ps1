@@ -161,7 +161,7 @@ $areas = Invoke-RestMethod -Uri "$baseUrl/api/parking-areas" -Headers $customerH
 $selectedArea = $areas[0]
 $areaDetail = Invoke-RestMethod -Uri "$baseUrl/api/parking-areas/$($selectedArea.id)" -Headers $customerHeaders
 $step8Pass = ($areas.Count -gt 0) -and ($areaDetail -ne $null) -and ($areaDetail.totalSlots -gt 0)
-Record-Step 8 "Parking Area Management" $step8Pass "Found $($areas.Count) area(s). Selected '$($selectedArea.name)' with $($selectedArea.totalSlots) slots, rate: `$$($selectedArea.hourlyRate)/hr."
+Record-Step 8 "Parking Area Management" $step8Pass "Found $($areas.Count) area(s). Selected '$($selectedArea.name)' with $($selectedArea.totalSlots) slots, rate: Birr ($selectedArea.hourlyRate)/hr."
 
 # ====================================================================
 # STEP 9: Test Parking Slots
@@ -202,7 +202,7 @@ $step10Pass = ($createdReservation -ne $null) -and
               ($createdReservation.totalPrice -gt 1.00) -and 
               ($createdReservation.status -ne $null) -and 
               $overlapBlocked
-Record-Step 10 "Reservation Creation & Concurrency Overlap Protection" $step10Pass "Reservation ID: $($createdReservation.id), Status: $($createdReservation.status), Server computed price: `$$($createdReservation.totalPrice). Overlapping booking blocked: $overlapBlocked."
+Record-Step 10 "Reservation Creation & Concurrency Overlap Protection" $step10Pass "Reservation ID: $($createdReservation.id), Status: $($createdReservation.status), Server computed price: Birr ($createdReservation.totalPrice). Overlapping booking blocked: $overlapBlocked."
 
 # ====================================================================
 # STEP 11: Test Payments
@@ -232,7 +232,7 @@ $step11Pass = ($paymentResult -ne $null) -and
               ($paymentResult.status -eq 2 -or $paymentResult.status -eq "Completed" -or $paymentResult.status -eq "Paid") -and 
               ($updatedReservation.status -eq 2 -or $updatedReservation.status -eq "Confirmed") -and 
               $duplicatePaymentBlocked
-Record-Step 11 "Payment Management" $step11Pass "Payment completed (`$$($paymentResult.amount)). Reservation status: Confirmed. Duplicate payment rejected: $duplicatePaymentBlocked."
+Record-Step 11 "Payment Management" $step11Pass "Payment completed (Birr ($paymentResult.amount)). Reservation status: Confirmed. Duplicate payment rejected: $duplicatePaymentBlocked."
 
 # ====================================================================
 # STEP 12: Test QR Code
@@ -285,7 +285,7 @@ $resAfterCheckOut = Invoke-RestMethod -Uri "$baseUrl/api/reservations/$($created
 $step14Pass = ($checkOutResult -ne $null) -and 
               ($resAfterCheckOut.status -eq 4 -or $resAfterCheckOut.status -eq "Completed") -and 
               ($slotAfterCheckOut.status -eq 1 -or $slotAfterCheckOut.status -eq "Available")
-Record-Step 14 "Vehicle Check-Out Operations" $step14Pass "Vehicle checked out. Slot released back to Available (Status: $($slotAfterCheckOut.status)). Overstay fee: `$$($checkOutResult.overstayFee)."
+Record-Step 14 "Vehicle Check-Out Operations" $step14Pass "Vehicle checked out. Slot released back to Available (Status: $($slotAfterCheckOut.status)). Overstay fee: Birr ($checkOutResult.overstayFee)."
 
 # ====================================================================
 # STEP 15: Test Parking History
@@ -305,7 +305,7 @@ $adminDashboard = Invoke-RestMethod -Uri "$baseUrl/api/dashboard/admin" -Headers
 $step16Pass = ($adminDashboard -ne $null) -and 
               ($adminDashboard.totalRevenue -ge 0) -and 
               ($adminDashboard.totalSlots -gt 0)
-Record-Step 16 "Admin Dashboard Metrics" $step16Pass "Revenue: `$$($adminDashboard.totalRevenue), Total slots: $($adminDashboard.totalSlots), Active reservations: $($adminDashboard.activeReservations)."
+Record-Step 16 "Admin Dashboard Metrics" $step16Pass "Revenue: Birr ($adminDashboard.totalRevenue), Total slots: $($adminDashboard.totalSlots), Active reservations: $($adminDashboard.activeReservations)."
 
 # ====================================================================
 # STEP 17: Test Angular Frontend Application

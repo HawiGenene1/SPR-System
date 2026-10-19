@@ -1,4 +1,4 @@
-import { Component, OnInit, ElementRef, ViewChild, inject, AfterViewInit, OnDestroy } from '@angular/core';
+﻿import { Component, OnInit, ElementRef, ViewChild, inject, AfterViewInit, OnDestroy } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
@@ -78,7 +78,7 @@ Chart.register(...registerables);
         <div class="kpi-grid">
           <div class="kpi-card highlight-amber">
             <span class="kpi-title">Gross Revenue</span>
-            <span class="kpi-value text-amber">\${{ totalRevenue | number:'1.2-2' }}</span>
+            <span class="kpi-value text-amber">Birr {{ totalRevenue | number:'1.2-2' }}</span>
             <span class="kpi-trend">Settled booking fees & overstays</span>
           </div>
 
@@ -190,12 +190,12 @@ Chart.register(...registerables);
 
               <!-- Revenue -->
               <ng-container *ngIf="col.key === 'revenue'">
-                <strong class="text-emerald">\${{ row.revenue | number:'1.2-2' }}</strong>
+                <strong class="text-emerald">Birr {{ row.revenue | number:'1.2-2' }}</strong>
               </ng-container>
 
               <!-- Avg Yield -->
               <ng-container *ngIf="col.key === 'avgYield'">
-                <span>\${{ row.avgYield | number:'1.2-2' }} / bay</span>
+                <span>Birr {{ row.avgYield | number:'1.2-2' }} / bay</span>
               </ng-container>
             </ng-template>
           </app-data-table>
@@ -635,7 +635,7 @@ export class AdminReportsComponent implements OnInit, AfterViewInit, OnDestroy {
         data: {
           labels: ['Fri', 'Sat', 'Sun', 'Mon', 'Tue', 'Wed', 'Thu'],
           datasets: [{
-            label: 'Daily Revenue ($)',
+            label: 'Daily Revenue (Birr)',
             data: [3200, 4100, 4800, 2900, 3400, 3650, 2800],
             borderColor: '#f59e0b',
             backgroundColor: 'rgba(245, 158, 11, 0.12)',

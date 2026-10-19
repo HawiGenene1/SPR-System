@@ -1,4 +1,4 @@
-import { Component, OnInit, inject } from '@angular/core';
+﻿import { Component, OnInit, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule, Router } from '@angular/router';
 import { MatButtonModule } from '@angular/material/button';
@@ -120,7 +120,7 @@ import { EmptyStateComponent } from '../../../shared/components/empty-state/empt
             </div>
             <div class="kpi-main">
               <span class="kpi-value text-amber">{{ totalReservationsCount }}</span>
-              <span class="kpi-sub">{{ completedCount }} completed • \${{ totalSpent | number:'1.2-2' }} spent</span>
+              <span class="kpi-sub">{{ completedCount }} completed • Birr {{ totalSpent | number:'1.2-2' }} spent</span>
             </div>
             <a routerLink="/customer/reservations" class="kpi-action-link">
               <span>View All Tickets</span>
@@ -148,7 +148,7 @@ import { EmptyStateComponent } from '../../../shared/components/empty-state/empt
               </span>
               <span class="meta-pill">
                 <span class="material-symbols-outlined">payments</span>
-                <span>\${{ featuredBooking.totalAmount | number:'1.2-2' }}</span>
+                <span>Birr {{ featuredBooking.totalAmount | number:'1.2-2' }}</span>
               </span>
             </div>
           </div>
@@ -181,7 +181,7 @@ import { EmptyStateComponent } from '../../../shared/components/empty-state/empt
                   <span class="f-location">{{ area.location || 'Metropolis Center' }}</span>
                 </div>
                 <div class="f-rate-box">
-                  <span class="f-rate">\${{ area.hourlyRate | number:'1.2-2' }}</span>
+                  <span class="f-rate">Birr {{ area.hourlyRate | number:'1.2-2' }}</span>
                   <span class="f-unit">/hr</span>
                 </div>
               </div>

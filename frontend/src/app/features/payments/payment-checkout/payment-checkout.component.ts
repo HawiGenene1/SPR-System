@@ -1,4 +1,4 @@
-import { Component, OnInit, OnDestroy, inject } from '@angular/core';
+﻿import { Component, OnInit, OnDestroy, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule, ReactiveFormsModule, FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute, Router, RouterModule } from '@angular/router';
@@ -73,7 +73,7 @@ export type PaymentState = 'idle' | 'processing' | 'success' | 'failed';
 
           <h3>Authorizing Payment...</h3>
           <p class="processing-subtext">
-            Connecting to secure gateway to process <strong>\${{ reservation.totalAmount | number:'1.2-2' }}</strong> via {{ getMethodLabel(selectedMethod) }}.
+            Connecting to secure gateway to process <strong>Birr {{ reservation.totalAmount | number:'1.2-2' }}</strong> via {{ getMethodLabel(selectedMethod) }}.
           </p>
 
           <div class="processing-steps">
@@ -119,7 +119,7 @@ export type PaymentState = 'idle' | 'processing' | 'success' | 'failed';
             </div>
             <div class="receipt-row">
               <span class="r-label">Amount Paid:</span>
-              <span class="r-val price-highlight">\${{ reservation.totalAmount | number:'1.2-2' }}</span>
+              <span class="r-val price-highlight">Birr {{ reservation.totalAmount | number:'1.2-2' }}</span>
             </div>
             <div class="receipt-row">
               <span class="r-label">Payment Method:</span>
@@ -292,7 +292,7 @@ export type PaymentState = 'idle' | 'processing' | 'success' | 'failed';
                   </div>
                   <div class="detail-content">
                     <span class="label">Authoritative Amount</span>
-                    <span class="value total-amount">\${{ reservation.totalAmount | number:'1.2-2' }}</span>
+                    <span class="value total-amount">Birr {{ reservation.totalAmount | number:'1.2-2' }}</span>
                   </div>
                 </div>
               </div>
@@ -302,7 +302,7 @@ export type PaymentState = 'idle' | 'processing' | 'success' | 'failed';
                 <label>Pay for a different booking:</label>
                 <mat-select [value]="reservation.id" (selectionChange)="onSwitchReservation($event.value)">
                   <mat-option *ngFor="let res of pendingReservations" [value]="res.id">
-                    Bay {{ res.slotNumber }} ({{ res.parkingAreaName }}) - \${{ res.totalAmount | number:'1.2-2' }}
+                    Bay {{ res.slotNumber }} ({{ res.parkingAreaName }}) - Birr {{ res.totalAmount | number:'1.2-2' }}
                   </mat-option>
                 </mat-select>
               </div>
@@ -454,7 +454,7 @@ export type PaymentState = 'idle' | 'processing' | 'success' | 'failed';
                   [disabled]="isPayButtonDisabled"
                   (click)="submitPayment()">
                   <span class="material-symbols-outlined">lock</span>
-                  <span>Pay \${{ reservation.totalAmount | number:'1.2-2' }} & Activate Pass</span>
+                  <span>Pay Birr {{ reservation.totalAmount | number:'1.2-2' }} & Activate Pass</span>
                 </button>
               </div>
             </div>

@@ -1,4 +1,4 @@
-import { Component, OnInit, inject } from '@angular/core';
+﻿import { Component, OnInit, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
@@ -82,7 +82,7 @@ import { StatusBadgeComponent } from '../../../shared/components/status-badge/st
                 <td>{{ rec.durationMinutes != null ? (rec.durationMinutes + ' min') : 'In Lot' }}</td>
                 <td>
                   <span [class.danger-fee]="rec.overstayFee && rec.overstayFee > 0">
-                    \${{ (rec.overstayFee || 0) | number:'1.2-2' }}
+                    Birr {{ (rec.overstayFee || 0) | number:'1.2-2' }}
                   </span>
                 </td>
                 <td>

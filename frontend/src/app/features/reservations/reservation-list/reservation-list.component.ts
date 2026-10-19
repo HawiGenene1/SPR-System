@@ -1,4 +1,4 @@
-import { Component, OnInit, inject } from '@angular/core';
+﻿import { Component, OnInit, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Router, RouterModule } from '@angular/router';
 import { MatButtonModule } from '@angular/material/button';
@@ -100,7 +100,7 @@ import { ConfirmationDialogComponent } from '../../../shared/components/confirma
             <!-- Total Amount -->
             <ng-container *ngIf="col.key === 'totalAmount'">
               <div class="amount-cell">
-                <span class="price-val">\${{ row.totalAmount | number:'1.2-2' }}</span>
+                <span class="price-val">Birr {{ row.totalAmount | number:'1.2-2' }}</span>
                 <span class="pay-status" [class.paid]="row.payment?.status === 'Completed'">
                   {{ row.payment?.status === 'Completed' ? 'Paid' : 'Unpaid' }}
                 </span>

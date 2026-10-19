@@ -1,4 +1,4 @@
-import { Component, inject } from '@angular/core';
+﻿import { Component, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { MatButtonModule } from '@angular/material/button';
@@ -144,7 +144,7 @@ import { StatusBadgeComponent } from '../../../shared/components/status-badge/st
               </div>
               <div class="r-item" *ngIf="checkOutResult.overstayFee > 0">
                 <span>Overstay Fee:</span>
-                <strong class="text-red">\${{ checkOutResult.overstayFee | number:'1.2-2' }}</strong>
+                <strong class="text-red">Birr {{ checkOutResult.overstayFee | number:'1.2-2' }}</strong>
               </div>
               <div class="r-item">
                 <span>Exit Time:</span>

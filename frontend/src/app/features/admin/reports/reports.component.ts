@@ -1,4 +1,4 @@
-import { Component, OnInit, AfterViewInit, ViewChild, ElementRef, inject } from '@angular/core';
+﻿import { Component, OnInit, AfterViewInit, ViewChild, ElementRef, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
@@ -273,7 +273,7 @@ export class AdminReportsComponent implements OnInit, AfterViewInit {
         data: {
           labels: this.revenueData?.dates?.length ? this.revenueData.dates : ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'],
           datasets: [{
-            label: 'Daily Revenue ($)',
+            label: 'Daily Revenue (Birr)',
             data: this.revenueData?.amounts?.length ? this.revenueData.amounts : [210, 290, 310, 420, 560, 490, 380],
             borderColor: '#2563eb',
             backgroundColor: gradient,

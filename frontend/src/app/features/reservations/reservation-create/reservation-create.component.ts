@@ -1,4 +1,4 @@
-import { Component, OnInit, inject } from '@angular/core';
+﻿import { Component, OnInit, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule, ReactiveFormsModule, FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute, Router, RouterModule } from '@angular/router';
@@ -134,7 +134,7 @@ export interface WizardStep {
                     <span class="area-address">{{ area.location }}</span>
                   </div>
                   <div class="area-rate-tag">
-                    <span class="rate-val">\${{ area.hourlyRate | number:'1.2-2' }}</span>
+                    <span class="rate-val">Birr {{ area.hourlyRate | number:'1.2-2' }}</span>
                     <span class="rate-unit">/hr</span>
                   </div>
                 </div>
@@ -378,7 +378,7 @@ export interface WizardStep {
                 </div>
                 <div class="stat-right" *ngIf="isScheduleValid && selectedArea">
                   <span class="est-label">Estimated:</span>
-                  <span class="est-price">\${{ estimatedPrice | number:'1.2-2' }}</span>
+                  <span class="est-price">Birr {{ estimatedPrice | number:'1.2-2' }}</span>
                 </div>
               </div>
             </div>
@@ -557,7 +557,7 @@ export interface WizardStep {
               <div class="auth-price-body">
                 <div class="price-line">
                   <span>Facility Base Rate:</span>
-                  <span>\${{ selectedArea?.hourlyRate | number:'1.2-2' }} / hr</span>
+                  <span>Birr {{ selectedArea?.hourlyRate | number:'1.2-2' }} / hr</span>
                 </div>
                 <div class="price-line">
                   <span>Total Duration:</span>
@@ -567,7 +567,7 @@ export interface WizardStep {
                 <div class="price-line total-highlight">
                   <span>Authoritative Amount Due:</span>
                   <span class="big-amount">
-                    \${{ (backendReservation?.totalAmount || estimatedPrice) | number:'1.2-2' }}
+                    Birr {{ (backendReservation?.totalAmount || estimatedPrice) | number:'1.2-2' }}
                   </span>
                 </div>
               </div>
@@ -627,7 +627,7 @@ export interface WizardStep {
             <div class="amount-due-banner">
               <div class="banner-texts">
                 <span class="banner-sub">Authoritative Total Due</span>
-                <span class="banner-val">\${{ backendReservation?.totalAmount | number:'1.2-2' }}</span>
+                <span class="banner-val">Birr {{ backendReservation?.totalAmount | number:'1.2-2' }}</span>
               </div>
               <div class="banner-secure">
                 <span class="material-symbols-outlined">lock</span>
@@ -709,7 +709,7 @@ export interface WizardStep {
                 (click)="processPayment()">
                 <span class="material-symbols-outlined">check_circle</span>
                 <span>
-                  {{ processingPayment ? 'Processing Settlement...' : 'Authorize & Pay \$' + ((backendReservation?.totalAmount || estimatedPrice) | number:'1.2-2') }}
+                  {{ processingPayment ? 'Processing Settlement...' : 'Authorize & Pay Birr ' + ((backendReservation?.totalAmount || estimatedPrice) | number:'1.2-2') }}
                 </span>
               </button>
             </div>
@@ -784,7 +784,7 @@ export interface WizardStep {
 
                   <div class="meta-row">
                     <span class="meta-label">Amount Paid</span>
-                    <span class="meta-val text-green font-mono">\${{ backendReservation?.totalAmount | number:'1.2-2' }} (Paid)</span>
+                    <span class="meta-val text-green font-mono">Birr {{ backendReservation?.totalAmount | number:'1.2-2' }} (Paid)</span>
                   </div>
                 </div>
               </div>
@@ -856,7 +856,7 @@ export interface WizardStep {
             <div class="price-breakdown-box">
               <div class="price-row">
                 <span class="label">Hourly Rate:</span>
-                <span class="val">\${{ (selectedArea?.hourlyRate || 0) | number:'1.2-2' }}/hr</span>
+                <span class="val">Birr {{ (selectedArea?.hourlyRate || 0) | number:'1.2-2' }}/hr</span>
               </div>
               <div class="price-row">
                 <span class="label">Estimated Duration:</span>
@@ -876,7 +876,7 @@ export interface WizardStep {
                   </span>
                 </div>
                 <span class="price-figure" [class.verified]="!!backendReservation">
-                  \${{ (backendReservation?.totalAmount || estimatedPrice) | number:'1.2-2' }}
+                  Birr {{ (backendReservation?.totalAmount || estimatedPrice) | number:'1.2-2' }}
                 </span>
               </div>
             </div>
@@ -2428,7 +2428,7 @@ export class ReservationCreateComponent implements OnInit {
         this.lockingInReservation = false;
         this.backendReservation = res.data;
         this.notification.success(
-          `Authoritative price verified: \$${this.backendReservation.totalAmount.toFixed(2)}. Ticket locked!`
+          `Authoritative price verified: Birr ${this.backendReservation.totalAmount.toFixed(2)}. Ticket locked!`
         );
       },
       error: (err) => {

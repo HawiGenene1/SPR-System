@@ -1,4 +1,4 @@
-import { Component, OnInit, inject } from '@angular/core';
+﻿import { Component, OnInit, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
@@ -48,7 +48,7 @@ import { StatusBadgeComponent } from '../../../shared/components/status-badge/st
         <div class="kpi-card highlight-amber">
           <div class="kpi-info">
             <span class="kpi-label">Gross Revenue</span>
-            <span class="kpi-value text-amber">\${{ totalSettledAmount | number:'1.2-2' }}</span>
+            <span class="kpi-value text-amber">Birr {{ totalSettledAmount | number:'1.2-2' }}</span>
             <span class="kpi-hint">Completed payments collected</span>
           </div>
           <span class="material-symbols-outlined kpi-icon text-amber">payments</span>
@@ -161,7 +161,7 @@ import { StatusBadgeComponent } from '../../../shared/components/status-badge/st
 
             <!-- Amount -->
             <ng-container *ngIf="col.key === 'amount'">
-              <strong class="amount-text">\${{ row.amount | number:'1.2-2' }}</strong>
+              <strong class="amount-text">Birr {{ row.amount | number:'1.2-2' }}</strong>
             </ng-container>
 
             <!-- Paid Timestamp -->
@@ -230,7 +230,7 @@ import { StatusBadgeComponent } from '../../../shared/components/status-badge/st
 
               <div class="receipt-row total-row">
                 <span class="lbl">Gross Settled Amount:</span>
-                <span class="val total-amount">\${{ selectedPayment.amount | number:'1.2-2' }}</span>
+                <span class="val total-amount">Birr {{ selectedPayment.amount | number:'1.2-2' }}</span>
               </div>
             </div>
           </div>

@@ -1,4 +1,4 @@
-import { Component, OnInit, ElementRef, ViewChild, inject } from '@angular/core';
+﻿import { Component, OnInit, ElementRef, ViewChild, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
@@ -149,7 +149,7 @@ import { StatusBadgeComponent } from '../../../shared/components/status-badge/st
             <span class="material-symbols-outlined alert-icon">warning</span>
             <div class="alert-texts">
               <strong>Overstay Detected:</strong>
-              <span>Vehicle exceeded scheduled exit by {{ overstayMinutes }} minutes. Overstay fee of \${{ estimatedOverstayFee | number:'1.2-2' }} will be applied.</span>
+              <span>Vehicle exceeded scheduled exit by {{ overstayMinutes }} minutes. Overstay fee of Birr {{ estimatedOverstayFee | number:'1.2-2' }} will be applied.</span>
             </div>
           </div>
 

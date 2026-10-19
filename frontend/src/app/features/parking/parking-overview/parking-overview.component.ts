@@ -1,4 +1,4 @@
-import { Component, OnInit, inject } from '@angular/core';
+﻿import { Component, OnInit, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { Router, RouterModule } from '@angular/router';
@@ -55,7 +55,7 @@ import { StatusBadgeComponent } from '../../../shared/components/status-badge/st
           <div class="tab-content">
             <span class="tab-name">{{ area.name }}</span>
             <div class="tab-metrics">
-              <span class="rate-tag">\${{ area.hourlyRate | number:'1.2-2' }}/hr</span>
+              <span class="rate-tag">Birr {{ area.hourlyRate | number:'1.2-2' }}/hr</span>
               <span class="slots-tag">{{ area.availableSlots }}/{{ area.totalSlots }} Free</span>
             </div>
           </div>

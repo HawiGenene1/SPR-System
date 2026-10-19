@@ -1,4 +1,4 @@
-import { Component, OnInit, inject } from '@angular/core';
+﻿import { Component, OnInit, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule, ReactiveFormsModule, FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { RouterModule } from '@angular/router';
@@ -68,7 +68,7 @@ import { LoadingSpinnerComponent } from '../../../shared/components/loading-spin
               </div>
 
               <div class="field-item">
-                <label>Hourly Overstay Penalty Tariff ($/hr)</label>
+                <label>Hourly Overstay Penalty Tariff (Birr/hr)</label>
                 <input type="number" step="0.5" formControlName="hourlyOverstayFee" class="custom-input" min="0" />
                 <span class="field-hint">Rate charged per hour when a vehicle exceeds the grace period.</span>
               </div>

@@ -1,4 +1,4 @@
-import { Component, OnInit, inject } from '@angular/core';
+﻿import { Component, OnInit, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
@@ -124,9 +124,9 @@ import { StatusBadgeComponent } from '../../../shared/components/status-badge/st
             <!-- Overstay Penalty -->
             <ng-container *ngIf="col.key === 'overstayFee'">
               <span class="overstay-txt text-red" *ngIf="row.overstayFee && row.overstayFee > 0">
-                +\${{ row.overstayFee | number:'1.2-2' }}
+                +Birr {{ row.overstayFee | number:'1.2-2' }}
               </span>
-              <span class="no-fee-txt" *ngIf="!row.overstayFee || row.overstayFee === 0">$0.00</span>
+              <span class="no-fee-txt" *ngIf="!row.overstayFee || row.overstayFee === 0">0.00 Birr</span>
             </ng-container>
 
             <!-- Status -->

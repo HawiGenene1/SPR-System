@@ -1,4 +1,4 @@
-import { Component, OnInit, ElementRef, ViewChild, inject, AfterViewInit, OnDestroy } from '@angular/core';
+﻿import { Component, OnInit, ElementRef, ViewChild, inject, AfterViewInit, OnDestroy } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { FormsModule } from '@angular/forms';
@@ -165,9 +165,9 @@ Chart.register(...registerables);
               </div>
             </div>
             <div class="kpi-middle">
-              <span class="kpi-value text-amber">\${{ (stats.totalRevenue || 18450) | number:'1.2-2' }}</span>
+              <span class="kpi-value text-amber">Birr {{ (stats.totalRevenue || 18450) | number:'1.2-2' }}</span>
               <span class="kpi-sub">
-                Today: <strong>\${{ (stats.todayRevenue || stats.todaysRevenue || 1240) | number:'1.2-2' }}</strong>
+                Today: <strong>Birr {{ (stats.todayRevenue || stats.todaysRevenue || 1240) | number:'1.2-2' }}</strong>
               </span>
             </div>
             <div class="kpi-bottom-link">Payments Ledger →</div>
@@ -348,7 +348,7 @@ Chart.register(...registerables);
 
               <!-- Total -->
               <ng-container *ngIf="col.key === 'totalAmount'">
-                <strong class="text-emerald">\${{ (row.totalAmount || 0) | number:'1.2-2' }}</strong>
+                <strong class="text-emerald">Birr {{ (row.totalAmount || 0) | number:'1.2-2' }}</strong>
               </ng-container>
 
               <!-- Status -->
@@ -1002,7 +1002,7 @@ export class AdminDashboardComponent implements OnInit, AfterViewInit, OnDestroy
         data: {
           labels: labels.length > 0 ? labels : ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'],
           datasets: [{
-            label: 'Revenue ($)',
+            label: 'Revenue (Birr)',
             data: amounts.length > 0 ? amounts : [980, 1120, 1240, 1380, 1450, 1620, 1420],
             borderColor: '#f59e0b',
             backgroundColor: 'rgba(245, 158, 11, 0.12)',

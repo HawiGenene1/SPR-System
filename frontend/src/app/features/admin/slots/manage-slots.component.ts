@@ -1,4 +1,4 @@
-import { Component, OnInit, inject } from '@angular/core';
+﻿import { Component, OnInit, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule, ReactiveFormsModule, FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { RouterModule, ActivatedRoute } from '@angular/router';
@@ -194,7 +194,7 @@ import { ConfirmDialogComponent } from '../../../shared/components/confirm-dialo
 
             <!-- Hourly Rate -->
             <ng-container *ngIf="col.key === 'pricePerHour'">
-              <span class="price-text">\${{ (row.pricePerHour || 5.0) | number:'1.2-2' }}/hr</span>
+              <span class="price-text">Birr {{ (row.pricePerHour || 5.0) | number:'1.2-2' }}/hr</span>
             </ng-container>
 
             <!-- Status -->
@@ -274,7 +274,7 @@ import { ConfirmDialogComponent } from '../../../shared/components/confirm-dialo
                   </select>
                 </div>
                 <div class="form-group">
-                  <label>Base Hourly Tariff (\$) *</label>
+                  <label>Base Hourly Tariff (Birr) *</label>
                   <input type="number" step="0.5" formControlName="pricePerHour" class="modal-input" />
                 </div>
               </div>

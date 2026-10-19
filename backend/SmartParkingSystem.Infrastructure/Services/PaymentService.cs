@@ -179,7 +179,7 @@ public class PaymentService : IPaymentService
         {
             TransactionReference = transactionRef,
             Amount = amountToCharge,
-            Currency = "USD",
+            Currency = "ETB",
             PaymentMethod = request.PaymentMethod,
             CustomerEmail = reservation.User.Email,
             CustomerName = reservation.User.FullName,

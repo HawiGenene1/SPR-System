@@ -1,4 +1,4 @@
-import { Component, OnInit, inject } from '@angular/core';
+﻿import { Component, OnInit, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormBuilder, FormGroup, ReactiveFormsModule, FormsModule, Validators } from '@angular/forms';
 import { Router, RouterModule } from '@angular/router';
@@ -67,7 +67,7 @@ import { StatusBadgeComponent } from '../../../shared/components/status-badge/st
           </div>
           <div class="ticket-row">
             <span>Total Paid:</span>
-            <strong class="price-val">\${{ completedReservation.totalAmount | number:'1.2-2' }}</strong>
+            <strong class="price-val">Birr {{ completedReservation.totalAmount | number:'1.2-2' }}</strong>
           </div>
         </div>
 
@@ -109,7 +109,7 @@ import { StatusBadgeComponent } from '../../../shared/components/status-badge/st
                 (click)="onSelectArea(area)">
                 <div class="area-header">
                   <h4>{{ area.name }}</h4>
-                  <span class="rate-badge">\${{ area.hourlyRate | number:'1.2-2' }}/hr</span>
+                  <span class="rate-badge">Birr {{ area.hourlyRate | number:'1.2-2' }}/hr</span>
                 </div>
                 <div class="area-meta">
                   <span class="meta-item">
@@ -235,7 +235,7 @@ import { StatusBadgeComponent } from '../../../shared/components/status-badge/st
               </div>
               <div class="summary-row">
                 <span class="label">Hourly Rate</span>
-                <span class="val">\${{ selectedArea ? (selectedArea.hourlyRate | number:'1.2-2') : '0.00' }}/hr</span>
+                <span class="val">Birr {{ selectedArea ? (selectedArea.hourlyRate | number:'1.2-2') : '0.00' }}/hr</span>
               </div>
             </div>
 
@@ -284,7 +284,7 @@ import { StatusBadgeComponent } from '../../../shared/components/status-badge/st
             <!-- Total Price Calculation -->
             <div class="total-row">
               <span class="total-label">Total Amount</span>
-              <span class="total-price">\${{ estimatedTotal | number:'1.2-2' }}</span>
+              <span class="total-price">Birr {{ estimatedTotal | number:'1.2-2' }}</span>
             </div>
 
             <button 
@@ -293,7 +293,7 @@ import { StatusBadgeComponent } from '../../../shared/components/status-badge/st
               [disabled]="!canProceed() || isSubmitting"
               (click)="onConfirmAndPay()">
               <mat-spinner *ngIf="isSubmitting" diameter="20" color="accent"></mat-spinner>
-              <span *ngIf="!isSubmitting">Confirm & Pay \${{ estimatedTotal | number:'1.2-2' }}</span>
+              <span *ngIf="!isSubmitting">Confirm & Pay Birr {{ estimatedTotal | number:'1.2-2' }}</span>
             </button>
 
             <p class="guarantee-note">

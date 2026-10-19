@@ -1,4 +1,4 @@
-import { Component, OnInit, inject } from '@angular/core';
+﻿import { Component, OnInit, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
@@ -191,7 +191,7 @@ import { StatusBadgeComponent } from '../../../shared/components/status-badge/st
 
           <div class="drawer-info-row">
             <span class="lbl">Base Tariff:</span>
-            <span class="val font-bold">\${{ (selectedSlot.pricePerHour || 5) | number:'1.2-2' }} / hr</span>
+            <span class="val font-bold">Birr {{ (selectedSlot.pricePerHour || 5) | number:'1.2-2' }} / hr</span>
           </div>
 
           <!-- Contextual info if Occupied -->

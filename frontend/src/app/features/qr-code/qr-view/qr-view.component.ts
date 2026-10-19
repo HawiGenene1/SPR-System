@@ -1,4 +1,4 @@
-import { Component, OnInit, inject } from '@angular/core';
+﻿import { Component, OnInit, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ActivatedRoute, RouterModule } from '@angular/router';
 import { MatButtonModule } from '@angular/material/button';
@@ -249,7 +249,7 @@ import { StatusBadgeComponent } from '../../../shared/components/status-badge/st
           <div class="ticket-legal-strip">
             <div class="amount-tag">
               <span class="amt-label">Total Paid:</span>
-              <span class="amt-val font-mono">\${{ activeReservation.totalAmount | number:'1.2-2' }}</span>
+              <span class="amt-val font-mono">Birr {{ activeReservation.totalAmount | number:'1.2-2' }}</span>
             </div>
             <div class="gate-notice">
               <span>Valid for 1 vehicle entry and exit. Automated barrier raises on detection.</span>

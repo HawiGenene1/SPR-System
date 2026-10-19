@@ -1,4 +1,4 @@
-import { Component, OnInit, inject } from '@angular/core';
+﻿import { Component, OnInit, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
@@ -211,7 +211,7 @@ import { ConfirmDialogComponent } from '../../../shared/components/confirm-dialo
 
             <!-- Amount -->
             <ng-container *ngIf="col.key === 'totalAmount'">
-              <strong class="amount-val">\${{ (row.totalAmount || 0) | number:'1.2-2' }}</strong>
+              <strong class="amount-val">Birr {{ (row.totalAmount || 0) | number:'1.2-2' }}</strong>
             </ng-container>
 
             <!-- Status -->
@@ -278,7 +278,7 @@ import { ConfirmDialogComponent } from '../../../shared/components/confirm-dialo
               </div>
               <div class="d-cell">
                 <span class="lbl">Total Tariff:</span>
-                <span class="val font-bold text-emerald">\${{ (inspectingReservation.totalAmount || 0) | number:'1.2-2' }}</span>
+                <span class="val font-bold text-emerald">Birr {{ (inspectingReservation.totalAmount || 0) | number:'1.2-2' }}</span>
               </div>
               <div class="d-cell">
                 <span class="lbl">Current State:</span>

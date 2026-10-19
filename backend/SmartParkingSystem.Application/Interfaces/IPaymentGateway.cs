@@ -6,7 +6,7 @@ public class PaymentGatewayRequest
 {
     public string TransactionReference { get; set; } = string.Empty;
     public decimal Amount { get; set; }
-    public string Currency { get; set; } = "USD";
+    public string Currency { get; set; } = "ETB";
     public PaymentMethod PaymentMethod { get; set; }
     public string? CustomerEmail { get; set; }
     public string? CustomerName { get; set; }

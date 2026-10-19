@@ -1,4 +1,4 @@
-import { Component, OnInit, inject } from '@angular/core';
+﻿import { Component, OnInit, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
@@ -172,11 +172,11 @@ import {
               </div>
               <div class="breakdown-row" *ngIf="checkOutResult.overstayFee > 0">
                 <span class="danger-text">Overstay Fee:</span>
-                <strong class="danger-text">\${{ checkOutResult.overstayFee | number:'1.2-2' }}</strong>
+                <strong class="danger-text">Birr {{ checkOutResult.overstayFee | number:'1.2-2' }}</strong>
               </div>
               <div class="breakdown-row highlight">
                 <span>Total Due at Exit:</span>
-                <strong class="price-val">\${{ checkOutResult.totalDue | number:'1.2-2' }}</strong>
+                <strong class="price-val">Birr {{ checkOutResult.totalDue | number:'1.2-2' }}</strong>
               </div>
               <div class="breakdown-row">
                 <span>Payment Settlement:</span>

@@ -1,4 +1,4 @@
-import { Component, OnInit, inject } from '@angular/core';
+﻿import { Component, OnInit, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule, ReactiveFormsModule, FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { RouterModule } from '@angular/router';
@@ -83,7 +83,7 @@ import { ConfirmDialogComponent } from '../../../shared/components/confirm-dialo
         <div class="kpi-card highlight-amber">
           <div class="kpi-info">
             <span class="kpi-label">Average Tariff</span>
-            <span class="kpi-value text-amber">\${{ averageRate | number:'1.2-2' }}/hr</span>
+            <span class="kpi-value text-amber">Birr {{ averageRate | number:'1.2-2' }}/hr</span>
             <span class="kpi-hint">Hourly parking rate benchmark</span>
           </div>
           <span class="material-symbols-outlined kpi-icon text-amber">sell</span>
@@ -154,7 +154,7 @@ import { ConfirmDialogComponent } from '../../../shared/components/confirm-dialo
 
             <!-- Hourly Rate -->
             <ng-container *ngIf="col.key === 'hourlyRate'">
-              <span class="rate-badge">\${{ row.hourlyRate | number:'1.2-2' }}/hr</span>
+              <span class="rate-badge">Birr {{ row.hourlyRate | number:'1.2-2' }}/hr</span>
             </ng-container>
 
             <!-- Total Capacity -->
@@ -218,7 +218,7 @@ import { ConfirmDialogComponent } from '../../../shared/components/confirm-dialo
 
               <div class="form-row-2">
                 <div class="form-group">
-                  <label>Base Tariff (\$/hr) *</label>
+                  <label>Base Tariff (Birr/hr) *</label>
                   <input type="number" step="0.5" formControlName="hourlyRate" class="modal-input" />
                 </div>
                 <div class="form-group">

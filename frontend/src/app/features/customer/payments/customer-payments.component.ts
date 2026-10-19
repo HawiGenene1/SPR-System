@@ -1,4 +1,4 @@
-import { Component, OnInit, inject } from '@angular/core';
+﻿import { Component, OnInit, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ReactiveFormsModule, FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { MatButtonModule } from '@angular/material/button';
@@ -47,7 +47,7 @@ import { StatusBadgeComponent } from '../../../shared/components/status-badge/st
       <div class="kpi-grid">
         <div class="kpi-card">
           <span class="kpi-label">Total Amount Settled</span>
-          <span class="kpi-val text-blue">\${{ totalSpent | number:'1.2-2' }}</span>
+          <span class="kpi-val text-blue">Birr {{ totalSpent | number:'1.2-2' }}</span>
           <span class="kpi-sub">Total lifetime parking payments</span>
         </div>
 
@@ -99,7 +99,7 @@ import { StatusBadgeComponent } from '../../../shared/components/status-badge/st
 
             <!-- Amount -->
             <ng-container *ngIf="col.key === 'amount'">
-              <span class="amount-val">\${{ row.amount | number:'1.2-2' }}</span>
+              <span class="amount-val">Birr {{ row.amount | number:'1.2-2' }}</span>
             </ng-container>
 
             <!-- Status -->
@@ -141,7 +141,7 @@ import { StatusBadgeComponent } from '../../../shared/components/status-badge/st
             <mat-label>Pending Reservation</mat-label>
             <mat-select formControlName="reservationId" (selectionChange)="onReservationSelect()">
               <mat-option *ngFor="let r of pendingReservations" [value]="r.id">
-                Bay {{ r.slotNumber }} ({{ r.parkingAreaName }}) - \${{ r.totalAmount | number:'1.2-2' }}
+                Bay {{ r.slotNumber }} ({{ r.parkingAreaName }}) - Birr {{ r.totalAmount | number:'1.2-2' }}
               </mat-option>
             </mat-select>
           </mat-form-field>
@@ -157,7 +157,7 @@ import { StatusBadgeComponent } from '../../../shared/components/status-badge/st
 
           <div class="amount-due-box" *ngIf="selectedReservationForPay">
             <span class="due-label">Total Amount Due:</span>
-            <span class="due-val">\${{ selectedReservationForPay.totalAmount | number:'1.2-2' }}</span>
+            <span class="due-val">Birr {{ selectedReservationForPay.totalAmount | number:'1.2-2' }}</span>
           </div>
 
           <div class="modal-actions">
@@ -198,7 +198,7 @@ import { StatusBadgeComponent } from '../../../shared/components/status-badge/st
           </div>
           <div class="r-row total-row">
             <span>Amount Paid:</span>
-            <strong class="receipt-price">\${{ selectedReceipt.amount | number:'1.2-2' }}</strong>
+            <strong class="receipt-price">Birr {{ selectedReceipt.amount | number:'1.2-2' }}</strong>
           </div>
         </div>
 
